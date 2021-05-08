@@ -41,6 +41,18 @@ const characters = [
     console.log(getHeight);
 //3. Get array of objects with just name and height properties
 
-// let getNameHeightObj = characters.map(elem =>  return {elem.name, elem.height};, {});
-// console.log(getNameHeightObj);
+    let getNameHeightObj = characters.map(elem => {
+    let obj = {}
+    obj[elem.name] = elem.height;
+    return obj;
+    });
+
+    console.log(getNameHeightObj);
 //4. Get array of all first names
+
+let firstName = getNames.map(elem => {
+    eac = elem.split(" ")
+    return eac[0]
+});
+
+console.log(firstName);
