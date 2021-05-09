@@ -40,20 +40,23 @@ const characters = [
     let getHeight = characters.map(currentHeight => currentHeight.height);
     console.log(getHeight);
 //3. Get array of objects with just name and height properties
-    const nameAndHeight  = currentValue => {
-        let obj = {};
-        obj['name'] = currentValue.name;
-        obj['height'] = currentValue.height;
-        return obj;
-        }
-    let getNameHeightObj = characters.map(nameAndHeight);
+    // const nameAndHeight  = currentValue => {
+    //     let obj = {};
+    //     obj['name'] = currentValue.name;
+    //     obj['height'] = currentValue.height;
+    //     return obj;
+    //     }
+    let getNameHeightObj = characters.map(character => ({ //We want to return character name and character height
+        name: character.name, 
+        height: character.height
+    }));
 
     console.log(getNameHeightObj);
 //4. Get array of all first names
-    const returnFirstName = str => {
-        let each = str.split(" ")
-        return each[0];
-} 
-    let firstName = getNames.map(returnFirstName);
+//     const returnFirstName = str => {
+//         let each = str.split(" ")
+//         return each[0];
+// } 
+    let firstName = characters.map(character => character.name.split(" ")[0]);
 
     console.log(firstName);
