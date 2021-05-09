@@ -43,7 +43,7 @@ const characters = [
     const nameAndHeight  = currentValue => {
         let obj = {};
         obj['name'] = currentValue.name;
-        obj['height'] = currentValue.height
+        obj['height'] = currentValue.height;
         return obj;
         }
     let getNameHeightObj = characters.map(nameAndHeight);
@@ -52,7 +52,7 @@ const characters = [
 //4. Get array of all first names
     const returnFirstName = str => {
         let each = str.split(" ")
-        return each[0]
+        return each[0];
 } 
     let firstName = getNames.map(returnFirstName);
 
