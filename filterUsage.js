@@ -34,11 +34,21 @@ const characters = [
 //1. Get characters with mass greater than 100
 const greaterThan100 = item => item.mass > 100;
 const charactersWithMassGreaterThan100 = characters.filter(greaterThan100);
-//console.log(charactersWithMassGreaterThan100);
+console.log(charactersWithMassGreaterThan100);
 
 //2. Get characters with height less than 200
 const heightLessThan200 = item => item.height < 200;
 const characterWithHeightLessThan200 = characters.filter(heightLessThan200);
 console.log(characterWithHeightLessThan200);
+
+
 //3. Get all male characters
+const maleCheck = item => item['gender'] === 'male';
+const maleCharacters = characters.filter(maleCheck);
+console.log(maleCharacters);
+
+
 //4. Get all female characters
+const femaleCheck = item => item['gender'] === 'female';
+const femaleCharacters = characters.filter(femaleCheck);
+console.log(femaleCharacters);
