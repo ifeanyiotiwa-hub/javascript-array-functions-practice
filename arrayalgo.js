@@ -12,18 +12,19 @@ Notes
 
 function countTrue(arr) {
 	let store = {};
-	arr.map(item => {
+	const itemCount = item => {
 		if(!store[item]){
 			store[item] = 1
 		}else{
 			store[item]++
 		}
-	})
+	}
+	arr.map(itemCount)
 	
 	if (!store['true']){
 		return 0
 	}
-	
+	console.log(store)
     return store['true'];
 	 
 }
